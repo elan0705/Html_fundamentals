@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+<title>HTML's FUN-DA-MENTALS</title>
+<link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/N/new-google-favicon-logo-5E38E037AF-seeklogo.com.png">
+<meta charset="UTF-8">
+</head>
+<body style = "background-color:lightgreen;">
+
+<h1 style="text-align:center;"> &#129322   HTML's FUN-DA-MENTALS   &#129322 </h1>
+<hr>
+
+
+<strong>This blog is contains simple explanation on html fundamentals along with its snippet where the user can see what he wants, understand the code, play with it and most importantly reuse it!</strong>
+<pre style="font-size:120%;">
+To learn HTML with ease navigate to Contents:
+<ul> 
+	<li> Click on the desired section to get redirected </li>
+	<li> Right click on the desired region and click inspect </li>
+	<li> The code associated to that region will be highlighted </li>
+	<li> Click on the code to see the details, learn from it, play with it and reuse it </li>
+	
+</ul>
+</pre>
+
+
+<p style="font-size:130%;"><strong>Note:</strong>Do not panic if something goes wrong while you're playing with it. You can always refresh the page, it will restore the original code of this blog. Be a chill-pill ! </p>
+
+
+<hr>
+
+
+<pre>
+<strong style="font-size:130%;">Things to know before you start !</strong>
+
+ To make your own html project open any notepad(that supports .txt files) on your system and save it as "add_name_here.html"
+ the structure of the html programming is given as
+		&lt; !DOCTYPE html &gt;   			 every new doc must begin with this
+		&lt; html &gt;   				 marking begining of html doc
+		&lt; head &gt;
+      			the declarations,page title, css, font styles, sections, classes and others are written here
+		&lt; /head &gt;
+		&lt; body &gt;
+ 		        this is where all the main functionality of the page is written
+		&lt; /body &gt;
+		&lt; /html &gt; 				 marking end of html doc
+
+</pre>
+
+<hr>
+
+<h1>Contents</h1>
+<ul style="list-style-type:square;">
+<li><a href="#a1">HTML SEEMANTICS</a></li>
+<li><a href="#a2">HTML LINKS</a></li>
+<li><a href="#a3">LINK DISPLAY COLORS</a></li>
+<li><a href="#a4">BOOKMARKS</a></li>
+<li><a href="#a5">IMAGE HANDLING</a></li>
+<li><a href="#a6">FONT EDITS</a></li>
+<li><a href="#a7">COLOR & SPACING</a></li>
+<li><a href="#a8">QUOTATION,ADDRESS,CITATION</a></li>
+<li><a href="#a9">COMMENTS</a></li>
+<li><a href="#a10">HTML COLORS</a></li>
+<li><a href="#a11">HTML CSS</a></li>
+<li><a href="#a12">TABLES</a></li>
+<li><a href="#a13">LISTS</a></li>
+<li><a href="#a14">BLOCK-LEVEL ELEMENTS</a></li>
+<li><a href="#a15">INLINE ELEMENTS</a></li>
+<li><a href="#a16">CLASS</a></li>
+<li><a href="#a17">ID</a></li>
+<li><a href="#a18">IFRAME</a></li>
+<li><a href="#a19">HTML JAVASCRIPT</a></li>
+<li><a href="#a20">HEAD</a></li>
+<li><a href="#a21">HTML LAYOUT</a></li>
+<li><a href="#a22">RESPONSIVE WEB DESIGN</a></li>
+<li><a href="#a23">COMPUTER CODE</a></li>
+<li><a href="#a24">SYMBOLS,EMOJIS,ENTITIES,CHARSETS</a></li>
+</ul>
+
+<hr>
+<h3 id="a1">Seemantics</h3>
+<pre>
+article - Defines independent, self-contained content
+aside	- Defines content aside from the page content
+details - Defines additional details that the user can view or hide
+figcaption - Defines a caption for a figure element
+figure - Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+footer - Defines a footer for a document or section
+header - Specifies a header for a document or section
+main -   Specifies the main content of a document
+mark -  Defines marked/highlighted text
+nav - Defines navigation links
+section	- Defines a section in a document
+summary - Defines a visible heading for a details element
+time - Defines a date/time
+</pre>
+
+<hr>
+<h3  id="a2">HTML links</h3>
+
+<a href = "https://en.wikipedia.org/wiki/Ravana" target="_blank"> More info</a>
+<p>the way to open external links is determined by target <br>
+"_blank" - new tab <br>
+"_self" - current tab <br>
+"_parent" - to open in the parent frame <br>
+"_top"- opens the document on the full body of the current window </p>
+
+<p><a href="https://www.google.com/">Google</a>using Absolute URL(a full web address leading outside the website)</p>
+
+<p><a href="html_images.asp">HTML Images</a>using Relative URL(a link to page within the website)</p>
+<p><a href="/css/default.asp">CSS Tutorial</a>using Relative URL(a link to page within the website)</p>
+
+<p><a href="default.asp">
+<img src="club.jpg" alt="Click me" style="width:42px;height:42px;">
+</a>using image as a link to Relative URL </p>
+
+<p><a href="mailto:someone@example.com">Send email</a>link to send some one an email it'll automatically open the mail app with the target email address</p>
+
+<p><button onclick="document.location='default.asp'">HTML Tutorial</button>
+To add a button to lead to the link specified</p>
+
+<p><a href="https://www.google.com/" title="Go to google">Google</a>adding a tooltip to indicate where the page navigates to</p>
+
+<hr>
+<h3  id="a3">Link display colors</h3>
+
+<p><pre>
+the display colors of the link option on the website can be done 
+ where link text option is set to green and  the link font and other design color set to orange before being clicked or hovered over when mouse is hovered over the link its shows red and when its clicked on and is ativated it turns yellow
+<!--
+<head>
+<style>
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: orange;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<a href="html_images.asp" target="_blank">HTML Images</a> 
+</body>
+</html>-->
+</pre>
+to change color of the link displayed
+</p>
+
+<!--<p>button color<pre>
+
+<head>
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+</head>
+<p>A link styled as a button:</p>
+<a href="default.asp" target="_blank">This is a link</a> 
+</pre>
+</body>
+</html>-->
+to change the color of the button and the text in it
+</p>
+
+<hr>
+<h3 id="a4">bookmarks</h3>
+
+<p>to jump to the content on the same page or different page</p>
+
+<p>a link to jump to the location of id C4 </p>
+<a href="#C4">Jump to Chapter 4</a> 
+<p>the location specified with the id inorder to bookmark it which will be displayed at the top of the page</p>
+<h2 id="C4">Chapter 4</h2>
+<p>a link to jump to the location of id C4 on another page of the website </p>
+<a href="html_demo.html#C4">Jump to Chapter 4</a> 
+
+
+
+<hr>
+<h3 id="a5">image</h3>
+
+<img src="club.jpg" alt="Alternative image name" width="104" height="152">
+
+<p>image floating right</p>
+<img src="club.jpg" alt="Smiley face" style="float:right;width:42px;height:42px;">
+
+<p>image floating left</p>
+<img src="club.jpg" alt="Smiley face" style="float:left;width:42px;height:42px;">
+
+<br>
+<br>
+<br>
+<p><pre>supported formats are
+.apng
+.gif
+.ico
+.cur
+.jpg
+.jpeg
+.jfif
+.pjpeg
+.pjp
+.png
+.svg<pre></p>
+
+
+<h4>Image Mapping</h4>
+<p>to map regions inside an image</p>
+
+<img src="depth_img.jpg" alt="my image" usemap="#imagemap">
+
+<map name="imagemap">
+  <area shape="rect" coords="246,91,367,383" alt="man" href="https://en.wikipedia.org/wiki/Man"  target='_blank'>
+  <area shape="rect" coords="381,315,606,408" alt="bed" href="https://en.wikipedia.org/wiki/Bed" target='_blank'>
+  <area shape="circle" coords="514,163,100" alt="mirror" href="https://en.wikipedia.org/wiki/Mirror" target='_blank'>
+</map>
+<pre>
+to select regions in the image pixel value and map them to their desired link  
+rect - select two edge points(4pix vals)
+circle - select the midpoint and specify is radius(3pix vals)
+poly - select the pixel outlining the entire body (as many as the desired region requires)
+default - select the entire region of the image
+note: use paint to get the pixel values
+</pre>
+
+<h4> background Image</h4>
+
+<p style="background-image: url('img_girl.jpg');">back ground image in a paragraph OR it can be defined in the head section too with the commented code <pre><!-- 
+<head>
+<style>
+p {
+  background-image: url('img_girl.jpg');
+}
+</style>
+</head>-->
+</pre></p>
+
+<p>to put the image a background for the entire page define it in the head section as commented here
+<!--
+<head>
+<style>
+body {
+  background-image: url('example_img_girl.jpg');
+  background-repeat: no-repeat;
+}
+</style>
+</head>
+-->
+note: if the image dimensions don't match they'll repeat themselves throughout the entire page n number of times by default thus background-repeat: no-repeat; is used to stop this, changing it to repeat will also repeat the images</p>
+
+<p>to fix the background image to one location use background-attachment: fixed; and to fill the entire image as that of the cover use background-size: cover; or mention sizes as 100% 100% instead of cover to strecth the image as commented below
+<!--
+<head>
+<style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; or background-size: 70% 100%;
+}
+</style>
+</head>-->
+</p>
+
+<h4> the picture element</h4>
+
+<p>the picture element makes the developers work easy to display different images for different tab sizes or screen sizes rather than working through stretching the images</p>
+
+<p>the code is commented below
+<!--
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<picture>
+  <source srcset="img_avatar.png">
+  <source srcset="img_girl.jpg">
+  <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+</picture>
+
+<p>The picture element can be used when the image format is not supported by all devices.</p>
+
+<p>The device will use the first image format it supports, and ignore the rest of the images.</p>
+
+</body>
+-->
+</p>
+
+<h4>favicon or image icon on the tab head</h4>
+
+<p>to display an image as an icon on the top left corner of the tab next to the title of the webpage in your browser the code commented below must be placed in the head section 
+<!--
+<head>
+  <title>My Page Title</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+--> the browsers that support favicons are Edge,chrome,firefox,opera,safari and the favicon image must always be given as a link</p>
+
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+
+<p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Reference for the video</a>.</p>
+<pre>to insert a video on the page use the syntax video. 
+Refresh the page if the video doesn't play.
+here Js is used to put buttons inside div which when clicked runs its respective function inside the script 
+</pre>
+
+
+<audio controls autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.ogv" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<pre>
+to insert audio use snytax audio, use controls syntax to get controls on display, autoplay to play it first time
+</pre>
+
+<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+<p>to insert a youtube plugin ues iframe and href</p>
+
+<hr>
+<h3 id="a5">font size,color,style edits</h3>
+
+<p style="color:red;">text color in red</p>
+<p style="background-color:powderblue;">line background in blue</p>
+<h3 style="background-color:tomato;">line background in red</h3>
+<hr>
+<h1 style="font-family:verdana;"> changing heading font</h1>
+<p style="font-family:courier;">changing paragraph font</p>
+<hr>
+<h1 style="font-size:300%;">heading size changed</h1>
+<p style="font-size:160%;">Para size changed</p>
+<hr>
+<h1 style="text-align:center;">Center alligned Heading</h1>
+<p style="text-align:right;">paragraph alligned to right</p>
+
+<h1 title="I'm a header">indicate title of heading </h1>
+
+
+<p title="I'm a line">indicate title of line </p>
+
+
+<hr>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<hr>
+<h3 id="a6">color and spacing</h3>
+
+<p style="color:red;">there's only 6 sizes of headings</p>
+
+<hr>
+
+<p>the horizontal line separator is given by hr.</p>
+
+
+<p>br is used to separate <br> a line into two!</p>
+
+<pre>
+pre prints the data
+in the 
+
+form specified and
+ spacing 
+however   it is entered
+</pre>
+
+<hr>
+<h3 id="a7">font edits</h3>
+
+<pre>
+<b>text bold</b>
+<i>text italic</i>
+<em>text emphasized</em>
+<small>smaller text</small>
+<strong>This text is important!</strong>
+</pre>
+
+<hr>
+<h3>font edits</h3>
+
+<p>used to <mark>highlight</mark> text</p>
+<p>This is <sub>subscripted</sub> text.</p>
+<p>This is <sup>super scripted</sup> text.</p>
+<p>Remove the color-blue from this line <del>blue</del> and insert red-color  <ins>red</ins>.</p>
+
+<hr>
+<h3 id="a8">Quotations, address, citations</h3>
+
+<blockquote cite="http://cite_the_website_from_which_info_was taken/index.html">
+The Information mentioned here is block quoted separately 
+</blockquote>
+
+<p>The goal is to: <q>Put this in double quotes</q> which is sucessful.</p>
+
+<p>to mention the abbrevations of word in a popup block <abbr title="Mister">Mr.</abbr> place cursor on the word mr</p>
+
+<address>
+<pre>
+To,
+Mr.ROY,
+Hall Road,
+B'lore-09,
+ROY.com
+IND
+</address>
+</pre>
+
+<p>Site a book, paper or article like <q>live let live</q> <cite> Elan's life </cite>piblished 1997 </p>
+
+
+<p> to write a line right to left <br>
+<bdo dir="rtl">This line will be written from right to left</bdo>
+<br>
+<bdo dir="ltr">This line will be written from left to right</bdo> </p>
+
+<hr>
+<h3 id="a9">Comments</h3>
+
+<p> commenting this sentence with <!--this is the comment--> the !-- to -- are the ones commented </p>
+
+<hr>
+<h3 id="a10">HTML Colors</h3>
+
+<h6 style="background-color:DodgerBlue;"> the background color of heading can be changed like Tomato,Orange,MediumSeaGreen,Gray,SlateBlue,Violet,LightGray etc</h6>
+<p style="background-color:Tomato;">background color of line</p>
+
+<h6 style="color:Tomato;">color of heading</h6>
+<p style="color:DodgerBlue;">color of line</p>
+
+<div style="background-color:black;color:white;padding:20px;">
+  <h5>Div a container element</h5>
+  <p>to form a container for a specific paragraph or heading etc </p>
+</div>
+
+<p>to color specific words of a <span style="color:blue;font-weight:bold;">line</span> or <span style="color:darkolivegreen;font-weight:bold;"> heading</span>we use span.</p>
+
+<h1 style="border:2px solid Tomato;">heading border color</h1>
+<p style="border:2px solid Violet;">line border color</p>
+
+<h6 style="background-color:rgb(255, 99, 71);">RBG color value specifications with rgb(a,b,c)</h6>
+<h6 style="background-color:#ff6347;">HEX color value specifications with hex code</h6>
+<h6 style="background-color:hsl(9, 100%, 64%);">HSL color value specifications with hsl(a,b,c)</h6>
+
+<h6 style="background-color:rgba(255, 99, 71, 0.5);">RGB Color transparency using rgba(a,b,c,A(0-1))</h6>
+<h6 style="background-color:hsla(9, 100%, 64%, 0.5);">HSL Color transparency using hsla(a,b,c,A(0-100%))</h6>
+
+
+
+<hr>
+<h3 id="a11">html CSS</h3>
+
+<h6 style="color:blue;">inline css to style fonts in heading</h16>
+<p style="color:red;">inline css to style fonts in line</p>
+
+<p><pre> the internal css is defined in the head section and is commented here <!--
+<head>
+<style>
+body {background-color: powderblue;}
+h1{
+color: blue;
+font-family: verdana;
+font-size: 300%;
+margin: 50px;
+}
+p{
+color: red;
+border: 2px solid powderblue;
+padding: 30px;
+} 
+or 
+p{border: 1px solid yellow;} <!--to make border thicker-->
+</style>
+</head>
+-->between this statement which should originally be at the begining of the code.It is used to define color,font-size/family,border,padding(border size),margin(space btwn borders) etc for all the headings and paragraphs </p></pre>
+
+<p><pre> the external css is defined in the head section and is commented here <!--
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+-->between this statement which should originally be at the begining of the code. <br> 
+To use this part one must save .css file in text editor in the same name you mention in href or use it from desired URL or even from the html folder of your current website .css file must contain the colours defined accordingly as commented below
+<!--
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+--> 
+</p></pre>
+
+<hr>
+<h3 id="a12">Html tables</h3>
+
+<h4>a table style, color, format etc has to be defined in the style section inside the head section as</h4> 
+<!--
+<head>
+<style>
+table, th, td {
+  border: 1px solid black; 
+  border-collapse: collapse; 
+  border-radius: 10px; 
+
+}
+th,td{
+  background-color: red;
+
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+
+}
+
+
+table {
+  border-spacing: 30px;
+}
+
+tr:nth-child(even) {
+  background-color: blue;
+}
+
+td:nth-child(even), th:nth-child(even) {
+  background-color: red;
+}
+
+tr:hover {background-color: green;}
+
+</style>
+</head>
+--> 
+
+<pre>
+<p>
+to change the background color of cells "background-color".
+
+to get rounded corners of the rows and columns to remove double lines delete the word "table" from "table,th,td{" in head section and add "border-radius: 10px;" inside it.
+
+to build a table with double borders of specified color of line and its width. this can be done separately with "border-style:solid;" and "border-color: black".
+Style can be dotted,dashed,solid,double,groove,ridge,inset,outset,none,hidden.
+
+to collapse double lines and just have a table with single lines "border-collapse: collapse;"
+
+to define space between the cells with the border "border-spacing: 30px;"
+
+to define padding spaces on all fours sides of the cell content "padding-top: 10px;" top,left,bottom,right
+
+"tr:nth-child(even)" to colour all even rows of the table to blue
+
+"td:nth-child(even), th:nth-child(even)"  to color all even columns of table to red by selecting all even data and heading 
+
+ to colour  and combine both row and column color "tr:nth-child(even)" and "td:nth-child(even), th:nth-child(even)"
+
+"tr:hover {background-color: green;}" to display green color of the row where-ever the row is hovered by mouse
+</pre>
+
+<h4>to define a table in body use "table" and rows are defined by "tr" , table row or column headings are defined by "th", table row data under each heading is defined by "td", table captions or table name is defined by "caption",</h4>
+
+<table style="width:300px;">
+<colgroup>
+    <col span="1" style="background-color: pink">
+    <col span="2" style="background-color: yellow">
+    
+</colgroup>
+  <tr>
+    <th>Company</th>
+    <th colspan="2">Name</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>ABB</td>
+    <td>Maria</td>
+    <td>k</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>DRDO</td>
+    <td>Jay</td>
+    <td>D</td>
+    <td>Mexico</td>
+  </tr>
+ <tr>
+    <td>ISRO</td>
+    <td>will</td>
+    <td>y</td>
+    <td>Kenya</td>
+  </tr>
+<tr>
+    <th rowspan="2">NIL</th>
+    <td>nil</td>
+    <td>-</td>
+    <td>nil</td>
+  </tr>
+<tr>
+    <td>nil</td>
+    <td>-</td>
+    <td>nil</td>
+  </tr>
+</table>
+
+<pre>
+"  style="width:300px;"  " to  increase the width of the table
+
+"_th colspan="2"_ Name _/th_" to merge 2 columns at a specified location with the specified heading
+
+"_th rowspan="2"_ NIL _/th_" to merge 2 rows at a specified location with the specified heading
+
+"colgroup" to colour entire elements of desired column with specific color with "col span..."
+
+"   _col span="3"_
+    _col span="2" style="background-color: pink"_    "to leave the first three columns empty and color the next two in pink
+
+" _col span="3" style="visibility: collapse"_    "to hide elements of column 3
+</pre>
+ </p>
+
+<hr>
+
+<h3 id="a13">Lists</h3>
+<h5>UNORDERED LIST</h5>
+<pre>
+an unorder list is alist which is arranged with bullets by default. 
+it starts with ul and its contents start with li list item
+note: li can contain a new list, and other HTML elements, like images and links, etc.
+<ul style="list-style-type:disc;">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+the bullet styles can be modified to disc, circle, square, none 
+Nested list (list inside a list) can be as
+<ul style="list-style-type:disc;">
+  <li>Coffee</li>
+	<ul>
+	  <li>black</li>
+	  <li>expresso</li>
+	</ul>
+  <li>Tea</li>
+	<ul>
+	  <li>black</li>
+	  <li>masala</li>
+	  <li>tea chai</li>
+	</ul>
+  <li>Milk</li>
+</ul>
+
+to set specification of how the list is visaulised can be done with css in the header section
+as commented: 
+<!--
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: underline;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+-->
+as shown we can alter the lists display by changing the color of the entire list/ text color, font, style padding/hovering display feature/ list display feature top to bottom or left right etc.
+content to displayed in the list can also be edited in the body
+</pre>
+<h5>ORDERED LIST</h5>
+<pre>
+the ordered list will always be marked with numbers or aphabets by default
+it starts with ol while its contents starts with li
+<ol type="1">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+the type and numbering options can be modified with type(a=lowercase Alphabets, A=lowercase Alphabets,I=uppercase Roman numerals,i=lowercase Roman numerals),control the list counting (start="50")
+<ol>
+  <li>Coffee</li>
+	<ol type="I">
+	<li>black</li>
+	<li>expresso</li>
+	</ol>
+  <li>Tea
+    <ol type="a">
+      <li>tea</li>
+	<ol start="50">
+	  <li>black</li>
+	  <li>masala</li>
+	  <li>tea chai</li>
+	</ol>
+      <li>Green tea</li>
+    </ol>
+  </li>
+  <li>Milk</li>
+</ol>
+<h5>DESCRIPTION LIST</h5>
+</pre> 
+a list of items using with description for each item.
+it starts with dl each item starts with dt and its description starts with dd
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink made of water and coffeebean extract </dd>
+  <dt>Milk</dt>
+  <dd>- white hot drink obtained from the cow </dd>
+</dl>
+
+<hr>
+<h3 id="14">Block-level Elements-</h3>
+<pre>
+html elements that always start with a new line and have margin space alloted before and after it they often take up a lot of space elements like :
+div,p,address,article,aside,blockquote,canvas,dd,div,dl,dt,fieldset,figcaption,figure,footer,form,h1-h6,header,hr,li,main,nav,noscript,ol,p,pre,section,table,tfoot,ul,video
+</pre>
+
+<hr>
+<h3 id="a15">Inline Elements-</h3>
+<pre> 
+these html elements donot start in a new line and only take up the width necessary for it like:
+span,a,abbr,acronym,b,bdo,big,br,button,cite,code,dfn,em,i,img,input,kbd,label,map,object,output,q,samp,script,select,small,strong,sub,sup,textarea,time,tt,var
+</pre>
+
+<hr>
+<h3 id="a16">Class</h3>
+<pre>
+a snippet of code containing certain values and function that  can be used by any element wanting to use that attribute
+the class comes in the head sectionand always starts with (.)and be accessed with <q>class= "class_name" in an element</q> as commented below.
+<!--
+<head>
+<style>
+.class_name_to_change_bg_color {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.class_to_align_text {
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="class_name_to_change_bg_color">
+  <h5>Class access</h25>
+  <p>the class can be accessed with <q>class= "class_name" in an element</q> </p>
+</div>
+
+<h5 class="city">different element can access same class</h5>
+<p class="city">this shows different element can access same class </p>
+
+<h2 class="class_name_to_change_bg_color class_to_align_text">this is to show that one element can access different classes</h2>
+</body>
+-->
+the commented snippet also shows use of multiple classes in one element class="classA classB"
+and also that different elements can access the same class</pre>
+
+<hr>
+<h3 id="a17">ID </h3>
+<pre>
+id is a html attributeto specify a unique identity for an html element.it cannont have more than one html element associated with it. the id is always creade with "#" and is accessed inside an element with "id="
+</pre>
+
+<p><a href="#givenidname">Jump to Chapter 4</a></p>
+
+
+
+
+
+
+
+<h4 id="givenidname">Chapter 4</h4>
+<p>here the id was created at "jump to chapter4" and was used as a bookmark to get to chapter 4 using the specific id name </p>
+
+<p>In the commented section below you can see an id created to define css properties in the style section under head section which is accessed in the body section with the same id name to acquire that property</p>
+<!--
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+-->
+
+<hr>
+<h3 id="a18">Iframe </h3>
+<pre>a space frame alloted which allows use of another webpage within the
+defined space of the current webpage. they start with a key word iframe
+
+Click on the link below to open the webpage inside the iframe created. the border, size  and title of frame can be modified
+the iframe is connectd to the link with target as the iframe name(not the title)</pre>
+
+<iframe src="demo_iframe.htm" name="my_iframe_name"  style="border:2px solid red;height:200px;width:300px;" title="Iframe Example"></iframe>
+
+<p><a href="https://en.wikipedia.org/wiki/Website" target="my_iframe_name">click me to display webpage within your webpage</a></p>
+
+
+<hr>
+<h3 id="a19">Java Script</h3>
+<pre>
+JS is used to make html pages more dynamic and interactive.
+"script" is used to define client-side JS where they contain JS codes or point ot external codes. it is often used for dynamic changes, image manipulation, form validation etc. the code below displays few JS manipulation
+</pre>
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<script>
+function FontEdit() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";        
+}
+function ContentEdit() { 
+  document.getElementById("demo").innerHTML = "Hello there!";
+}
+</script>
+
+<button type="button" onclick="FontEdit()">Edit Font</button>
+<button type="button" onclick="ContentEdit()">Change Content</button>
+
+<p>image manipulation</p>
+<script>
+function light(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "pic_bulboff.gif"
+    sty = style="border:10px solid blue;width:100;height:180;"
+  } else {
+    pic = "pic_bulbon.gif"
+    sty = style="border:10px solid yellow;width:100;height:180;"
+  }
+  document.getElementById('myImage').src = pic;
+  document.getElementById('myImage').style = sty;
+}
+</script>
+
+<img id="myImage" src="pic_bulboff.gif" style="border:10px solid blue;width:100;height:180;">
+
+<p>
+<button type="button" onclick="light(1)">Light On</button>
+<button type="button" onclick="light(0)">Light Off</button>
+</p>
+<p>noscript inidcates space for alternate content for users which do not support client-side scripts it can be inspected below</p>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<p>noscript inidcates space for alternate content for users which do not support client-side scripts</p>
+
+<hr>
+<h3 id="a20">head section</h3>
+<pre> in html head element is a container for the following elements: title, style, meta, link, script, and base 
+title- to define the title of the document
+style- to define style information for a single html page color,font,size etc
+link- to define relationship between current documnet and external source or element
+meta- to specify document details like author name, page description, characters set, keywords, viewport(user's visible area of a web page depends on different device sizes)settings etc commented below
+<!--
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+script- to define client side Javascripts
+base- to specify a base url for all the urls used in the page(like google.com as base for page using google images links,google map links,etc). there can only be one base element in a document
+
+</pre>
+
+<hr>
+<h3 id="a21">HTML layout</h3>
+<pre>
+html consists of certain semantics that define different parts of a webpage:
+header - defines header for a document or section of the page
+nav - defines all navigation links
+section - defines a section inside a document
+article - defines an independent selfcontained content
+aside - defines content aside from content(sidebar(having other breaking news etc))
+footer - defines footer of a document or a section
+details - defines additional details the user can open and close on demand 
+summary - defines a heading for the element
+
+the different types of layout techniques are 
+CSS Framework - most commonly used. <a href=https://www.w3schools.com/w3css/default.asp>W3.CSS<a> or <a href=https://www.w3schools.com/bootstrap/default.asp>bootstrap<a>
+
+CSS Float -it is easy to learn and work on. one must learn float and clear properties to implement it. <a href=https://www.w3schools.com/css/css_float.asp>Float&Clear<a>
+
+CSS Flexbox - it ensures that the elements behave predictable when the pagelayout must accomodate different screens and displays. <a href=https://www.w3schools.com/css/css3_flexbox.asp>FlexBox<a>
+
+CSS Grid - eliminates use of floats and positioning and isa grid-based layout system. <a href=https://www.w3schools.com/css/css_grid.asp>Grid<a>
+</pre>
+
+<hr>
+<h3 id="a22">Responsive Web design</h3>
+<pre>
+It is about creating web pages that look good on all devices.
+view these on different window sizes and screens 
+<!--
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+the commented part of this code uses meta in the head setcion to adjust
+the width of the webpage to the width ofthe device automatically.
+
+<img src="club.jpg" style="width:100%;">
+to allow the image to alter it's width either
+scale up or scale down.
+
+
+<img src="club.jpg" style="max-width:100%;height:auto;">
+to allow the image to alter it's width either
+scale up or scale down but will not exceed the original img size while scaling up
+
+<picture>
+  <source srcset="eye2.jpeg" media="(max-width: 600px)">
+  <source srcset="gloc.png" media="(max-width: 1500px)">
+  <source srcset="club.jpg">
+  <img src="img_ana.jpg" alt="Flowers" style="width:auto;">
+</picture>
+the picture element allows us to use different images for different screen sizes.
+vary the screen size and see the image change.
+
+Responsive text
+
+use vw in font sizing so that is adjusts itself while the window is resized.
+10vw = 10% of viewport width
+
+<h5 style="font-size:5vw;">Responsive Text in heading</h5>
+
+<p style="font-size:2vw;">Responsive text in paragraphs.vary the screen size </p>
+
+the example commented below uses media query that allows the elements to resize and rearrange themselves for different window sizes
+<!--
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: #2196F3;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color: #04AA6D;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Media Queries</h2>
+<p>Resize the browser window.</p>
+
+<p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+<div class="left">
+  <p>Left Menu</p>
+</div>
+
+<div class="main">
+  <p>Main Content</p>
+</div>
+
+<div class="right">
+  <p>Right Content</p>
+</div>
+
+</body>
+-->
+</pre>
+
+<h3 id="a23">Html Computercode</h3>
+<pre>
+code- it is used to declare the set of lines within it as code
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+
+kbd - it is used to define keyboard input. The content inside is displayed in the browser's default monospace font.
+Save the document by pressing <kbd>Ctrl + S</kbd>
+
+samp - it is used to define a sample output from a computer program.
+
+<samp>File not found.<br>Press F1 to continue</samp>
+
+var - it is used to define variables in a mathematical expression or programming and display them in italic.
+
+The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height
+
+</pre>
+
+
+<hr>
+<h3 id="a24">Symbols, Entities, Emojis, Charsets(charsets,ascii, win1252, iso8859, utf8, punctuation)</h3>
+<pre>
+Click the link below to find out what entity name or codes(alpha-numerical codes)  has to be used to obtain a symbol
+<a href="https://www.w3schools.com/html/html_entities.asp">Entities<a>
+
+Click the link below to find out what Symbol name or codes(alpha-numerical codes)  has to be used to obtain a symbol
+<a href="https://www.w3schools.com/html/html_symbols.asp">Symbols<a>
+
+Emojis are given by <a href="https://www.w3schools.com/charsets/ref_emoji.asp">Emojis<a>
+
+<p style="font-size:48px">&#128512; &#128516; &#128525; &#128151; &#128507; 
+&#128508; &#128509; &#128510; &#128511; &#128512; &#128513; &#128514;	
+&#128515; &#128516; &#128517;
+</p>
+
+Charsets ar given by  <a href="https://www.w3schools.com/charsets/default.asp">Charset<a> 
+
+</pre>
+
+</body>
+</html>
